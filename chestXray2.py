@@ -11,7 +11,7 @@ width=300
 dim=(width, height)
 
 #laplacian filter kernel
-kernel = np.array([[0, 1, 0] , [1, -4, 1] , [0, 1, 0]])
+kernel = np.array([[-1, -1, -1] , [-1, 8, -1] , [-1, -1, -1]])
 laplacian_kernel = cv2.filter2D(img, ddepth=cv2.CV_64F, kernel=kernel)
 
 #gaussian smoothening

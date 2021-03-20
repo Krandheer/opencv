@@ -7,7 +7,7 @@ ds=dicom.dcmread('/Users/randheerkumar/Desktop/sems/lastsem/bml735/ass3/CalfMusc
 dcm_sample=ds.pixel_array*128
 
 #lap(image)
-kernel = np.array([[0, 1, 0] , [1, -4, 1] , [0, 1, 0]])
+kernel = np.array([[-1, -1, -1] , [-1, 8, -1] , [-1, -1, -1]])
 laplacian_kernel = cv2.filter2D(dcm_sample, ddepth=cv2.CV_64F, kernel=kernel)
 
 high_boost1 = 1*dcm_sample-laplacian_kernel
