@@ -2,7 +2,6 @@ import numpy as np
 import cv2
 import pydicom as dicom
 
-
 #to run change the path of image to where image is placed
 ds=dicom.dcmread('/Users/randheerkumar/Desktop/sems/lastsem/bml735/ass3/SWI_MRI.dcm')
 dcm_sample=ds.pixel_array*128
@@ -15,7 +14,6 @@ high_boost1 = 1*dcm_sample-laplacian_kernel
 high_boost2 = 2*dcm_sample-laplacian_kernel
 high_boost10 = 10*dcm_sample-laplacian_kernel
 high_boost20 = 20*dcm_sample-laplacian_kernel
-
 
 height=250
 width=250
